@@ -5,9 +5,12 @@ import time
 from dotenv import load_dotenv
 from openai import OpenAI  # Or anthropic, google-genai depending on your API choice
 
-load_dotenv()
+load_dotenv() # Keeps it working locally with your .env file
 
-load_dotenv()
+# Explicitly check Streamlit secrets first (cloud), then fallback to environment variables (local)
+api_key = st.secrets.get("OPENAI_API_KEY") or os.environ.get("OPENAI_API_KEY")
+
+client = OpenAI(api_key=api_key)
 
 # Initialize API Client
 client = OpenAI()
