@@ -7,7 +7,9 @@ from openai import OpenAI  # Or anthropic, google-genai depending on your API ch
 
 load_dotenv()
 
-# Initialize API Client (Ensure OPENAI_API_KEY is set in your environment)
+load_dotenv()
+
+# Initialize API Client
 client = OpenAI()
 
 st.set_page_config(page_title="TTB Label Verification Prototype", page_icon="🍾", layout="wide")
