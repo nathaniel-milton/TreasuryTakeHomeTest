@@ -17,13 +17,13 @@ client = OpenAI()
 
 st.set_page_config(page_title="TTB Label Verification Prototype", page_icon="🍾", layout="wide")
 
-# Custom Styling for "Dave-proof" UI
+# To this:
 st.markdown("""
     <style>
     .big-font { font-size:20px !important; font-weight: bold; }
     .stAlert { margin-top: 10px; }
     </style>
-""", unsafe_allowed_code=html)
+""", unsafe_allow_html=True)
 
 ## Header Section
 st.title("🍾 AI-Powered Alcohol Label Verification")
